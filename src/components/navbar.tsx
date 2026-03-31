@@ -14,8 +14,7 @@ import {
   HomeIcon,
   LinkedinIcon,
   MailIcon,
-  TwitterIcon,
-  YoutubeIcon,
+  PhoneIcon,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -57,39 +56,57 @@ export default async function Navbar() {
         <Separator orientation="vertical" className="h-full" />
         {[
           {
-            name: "Twitter",
-            icon: TwitterIcon,
-            url: author?.social?.twitter || "#",
-          },
-          {
             name: "GitHub",
             icon: GithubIcon,
             url: author?.social?.github || "#",
+            external: true,
           },
           {
             name: "LinkedIn",
             icon: LinkedinIcon,
             url: author?.social?.linkedin || "#",
+            external: true,
           },
           {
-            name: "YouTube",
-            icon: YoutubeIcon,
-            url: author?.social?.youtube || "#",
+            name: "Email",
+            icon: MailIcon,
+            url: author?.social?.email || "#",
+            external: false,
+          },
+          {
+            name: "Phone",
+            icon: PhoneIcon,
+            url: author?.social?.phone || "#",
+            external: false,
           },
         ].map((social) => (
           <DockIcon key={social.name}>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link
-                  href={social.url}
-                  prefetch={false}
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
-                  )}
-                >
-                  <social.icon className="size-4" />
-                </Link>
+                {social.external ? (
+                  <Link
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    prefetch={false}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12"
+                    )}
+                  >
+                    <social.icon className="size-4" />
+                  </Link>
+                ) : (
+                  <a
+                    href={social.url}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12"
+                    )}
+                  >
+                    <social.icon className="size-4" />
+                  </a>
+                )}
               </TooltipTrigger>
               <TooltipContent>
                 <p>{social.name}</p>

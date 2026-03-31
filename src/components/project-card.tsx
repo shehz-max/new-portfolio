@@ -54,17 +54,19 @@ export function ProjectCard({
 
         <Link
           href={href || "#"}
-          className={cn("block cursor-pointer overflow-hidden aspect-video relative", className)}
+          className={cn("block cursor-pointer overflow-hidden relative bg-muted/30", className)}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-          <Image
-            src={image || ""}
-            alt={title}
-            width={500}
-            height={300}
-            unoptimized
-            className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-          />
+          <div className="relative w-full aspect-[16/10]">
+            <Image
+              src={image || ""}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              unoptimized
+              className="object-cover object-center transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+            />
+          </div>
         </Link>
 
         <CardHeader className="px-4 py-4 space-y-2 relative z-20">

@@ -221,7 +221,7 @@ export default async function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Feel free to{" "}
                 <Link
-                  href={`mailto:${author.social?.email ?? ""}`}
+                  href={author.social?.email ?? "#"}
                   className="text-blue-500 hover:underline"
                 >
                   send me an email

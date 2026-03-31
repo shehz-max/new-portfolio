@@ -24,6 +24,7 @@ export interface Author {
     twitter?: string;
     youtube?: string;
     email?: string;
+    phone?: string;
   };
 }
 
@@ -138,11 +139,12 @@ export const AUTHOR: Author = {
       items: ["n8n", "Agile/Scrum", "Project Management"],
     },
   ],
-  resumeUrl: "#", // You can update this with your actual resume URL
+  resumeUrl: "/resumes/Shehzad_Akhtar_resume.html", // HTML resume for download/print
   social: {
     github: "https://github.com/shehz-max",
     linkedin: "https://www.linkedin.com/in/shehzad-khan-bb23a6342",
-    email: "shehzad.akhtar124@gmail.com",
+    email: "mailto:shehzad.akhtar124@gmail.com",
+    phone: "tel:+923208641470",
   },
 };
 
