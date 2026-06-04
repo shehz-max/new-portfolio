@@ -168,40 +168,42 @@ export default async function Page() {
       </section>
       <CinematicSection />
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-10 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
-                </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground">
+                  03 — Selected Work
+                </span>
+                <div className="flex-1 h-px bg-border" />
               </div>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Projects I&apos;ve Built
+              </h2>
+              <p className="text-sm text-muted-foreground max-w-lg leading-relaxed">
+                Real-world applications shipped to production — from SEO tools
+                trusted by professionals to AI-powered legal and resume platforms.
+              </p>
             </div>
           </BlurFade>
-          {/* Uniform Grid - All cards same size */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[800px] mx-auto">
+
+          {/* 2×2 uniform grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {projects.map((project, id) => (
               <BlurFade
                 key={project._id}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.08}
               >
                 <ProjectCard
                   key={project._id}
+                  id={project._id}
                   title={project.title ?? ""}
                   description={project.description ?? []}
                   tags={project.technologies ?? []}
                   image={project.image?.asset?.url ?? ""}
                   video={project.video ?? ""}
                   links={project.links ?? []}
-                  href={project.links?.[0]?.url ?? ""}
+                  href={project.links?.[1]?.url ?? project.links?.[0]?.url ?? ""}
                 />
               </BlurFade>
             ))}

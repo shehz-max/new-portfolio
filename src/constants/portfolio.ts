@@ -269,12 +269,12 @@ export const PROJECTS: Project[] = [
         children: [
           {
             _type: "span",
-            text: "A comprehensive website to check Spam Score and Domain Authority. Helps users analyze website metrics for better SEO performance.",
+            text: "Free AI-powered spam score & domain authority checker. Instantly analyze any website's spam risk, Domain Authority (DA), and Page Authority (PA) using MOZ API data. Features bulk analysis for up to 50 websites, detailed toxicity reports, and actionable SEO insights.",
           },
         ],
       },
     ],
-    technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MOZ API", "React"],
     image: {
       asset: {
         url: "/projects/seo-sentinel.png",
@@ -283,31 +283,31 @@ export const PROJECTS: Project[] = [
     links: [
       {
         title: "GitHub",
-        url: "https://github.com/shehz-max/seo-sentinel",
+        url: "https://github.com/shehz-max/seo-sentinel.git",
         type: "code",
       },
       {
         title: "Live Demo",
-        url: "https://seo-sentinel-rose.vercel.app",
+        url: "https://seo-sentinel-rose.vercel.app/",
         type: "demo",
       },
     ],
   },
   {
     _id: "project-2",
-    title: "AI ATS Resume",
+    title: "ClauseGuard",
     description: [
       {
         _type: "block",
         children: [
           {
             _type: "span",
-            text: "An ATS-optimized resume builder that helps users create professional resumes tailored for Applicant Tracking Systems.",
+            text: "AI-powered legal contract analysis platform. Upload any PDF or DOCX contract and get instant risk scores, plain-English clause summaries, and industry benchmarking in under 3 seconds. Flags dangerous clauses and compares against thousands of standard legal templates.",
           },
         ],
       },
     ],
-    technologies: ["TypeScript", "React", "PDF.js"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "AI/NLP", "React"],
     image: {
       asset: {
         url: "/projects/ai-ats-resume.png",
@@ -316,64 +316,64 @@ export const PROJECTS: Project[] = [
     links: [
       {
         title: "GitHub",
-        url: "https://github.com/shehz-max/ai-ats-resume",
+        url: "https://github.com/shehz-max/Clause-Guard.git",
         type: "code",
       },
       {
         title: "Live Demo",
-        url: "https://ai-ats-resume.vercel.app",
+        url: "https://clause-guard-rho.vercel.app/",
         type: "demo",
       },
     ],
   },
   {
     _id: "project-3",
-    title: "Moverly Website",
+    title: "Nexus",
     description: [
       {
         _type: "block",
         children: [
           {
             _type: "span",
-            text: "A modern, responsive website for a moving company featuring service details, quote estimation, and contact forms.",
+            text: "No-code workflow automation platform that connects your apps and automates repetitive tasks — a Zapier alternative with flat-rate pricing. Build powerful multi-step automations with a visual drag-and-drop builder, saving teams 15+ hours every week.",
           },
         ],
       },
     ],
-    technologies: ["TypeScript", "Next.js", "Framer Motion"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Vite"],
     image: {
       asset: {
-        url: "/projects/moverly-website.png",
+        url: "/projects/project-1.webp",
       },
     },
     links: [
       {
         title: "GitHub",
-        url: "https://github.com/shehz-max/moverly-website",
+        url: "https://github.com/shehz-max/Nexus.git",
         type: "code",
       },
       {
         title: "Live Demo",
-        url: "https://moverly-website.vercel.app",
+        url: "https://nexus-alpha-gray-56.vercel.app/",
         type: "demo",
       },
     ],
   },
   {
     _id: "project-4",
-    title: "TaskFlow AI",
+    title: "AI ATS Resume",
     description: [
       {
         _type: "block",
         children: [
           {
             _type: "span",
-            text: "An intelligent task management application integrated with AI to help users prioritize and organize their daily workflow efficiently.",
+            text: "AI-powered resume optimizer that helps job seekers beat Applicant Tracking Systems. Upload your resume, paste a job description, and instantly get an ATS compatibility score, missing keyword suggestions, and a downloadable ATS-friendly resume — 100% free.",
           },
         ],
       },
     ],
-    technologies: ["TypeScript", "React", "OpenAI API"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "AI", "React"],
     image: {
       asset: {
         url: "/projects/taskflow-ai.png",
@@ -382,12 +382,12 @@ export const PROJECTS: Project[] = [
     links: [
       {
         title: "GitHub",
-        url: "https://github.com/shehz-max/taskflow-ai",
+        url: "https://github.com/shehz-max/ai-ats-resume.git",
         type: "code",
       },
       {
         title: "Live Demo",
-        url: "https://taskflow-ai-sandy.vercel.app",
+        url: "https://ai-ats-resume.vercel.app/",
         type: "demo",
       },
     ],
